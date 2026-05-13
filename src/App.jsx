@@ -32,9 +32,7 @@ const QUESTIONS = [
     options: [
       { label: "Tropical moist forest", value: "tropical_moist", icon: "🌴" },
       { label: "Tropical dry forest", value: "tropical_dry", icon: "🏜️" },
-      { label: "Temperate forest", value: "temperate", icon: "🍂" },
-      { label: "Agroforestry / silvopasture", value: "agroforestry", icon: "🌾" },
-      { label: "Mangrove / coastal", value: "mangrove", icon: "🌊" },
+      { label: "Coastal", value: "coastal", icon: "🌊" },
     ],
   },
   {
@@ -69,7 +67,7 @@ const RESOURCES = [
     scales: ["plot", "site"],
     budget: ["high"],
     expertise: ["gis", "research"],
-    ecosystems: ["tropical_moist", "tropical_dry", "temperate", "agroforestry"],
+    ecosystems: ["tropical_moist", "tropical_dry"],
     links: [
       { label: "lidR package", url: "https://r-lidar.github.io/lidR/" },
       { label: "PDAL pipeline tools", url: "https://pdal.io" },
@@ -84,7 +82,7 @@ const RESOURCES = [
     scales: ["plot", "site"],
     budget: ["medium", "high"],
     expertise: ["gis", "research"],
-    ecosystems: ["tropical_moist", "tropical_dry", "temperate", "agroforestry", "mangrove"],
+    ecosystems: ["tropical_moist", "tropical_dry", "coastal"],
     links: [
       { label: "OpenDroneMap", url: "https://www.opendronemap.org/" },
       { label: "WebODM", url: "https://www.opendronemap.org/webodm/" },
@@ -99,7 +97,7 @@ const RESOURCES = [
     scales: ["site", "landscape", "regional"],
     budget: ["low", "medium", "high"],
     expertise: ["gis", "research"],
-    ecosystems: ["tropical_moist", "tropical_dry", "temperate", "agroforestry", "mangrove"],
+    ecosystems: ["tropical_moist", "tropical_dry", "coastal"],
     links: [
       { label: "Google Earth Engine", url: "https://earthengine.google.com/" },
       { label: "SEPAL (FAO)", url: "https://sepal.io/" },
@@ -115,7 +113,7 @@ const RESOURCES = [
     scales: ["site", "landscape"],
     budget: ["high"],
     expertise: ["gis", "research"],
-    ecosystems: ["tropical_moist", "tropical_dry", "temperate", "agroforestry", "mangrove"],
+    ecosystems: ["tropical_moist", "tropical_dry", "coastal"],
     links: [
       { label: "Planet Explorer", url: "https://www.planet.com/explorer/" },
     ],
@@ -129,7 +127,7 @@ const RESOURCES = [
     scales: ["plot", "site"],
     budget: ["medium", "high"],
     expertise: ["technician", "research"],
-    ecosystems: ["tropical_moist", "tropical_dry", "temperate", "agroforestry", "mangrove"],
+    ecosystems: ["tropical_moist", "tropical_dry", "coastal"],
     links: [
       { label: "RAINFOR protocols", url: "https://rainfor.org/" },
       { label: "Open Foris", url: "https://openforis.org/" },
@@ -144,7 +142,7 @@ const RESOURCES = [
     scales: ["plot", "site"],
     budget: ["low", "medium"],
     expertise: ["community", "technician"],
-    ecosystems: ["tropical_moist", "tropical_dry", "temperate", "agroforestry", "mangrove"],
+    ecosystems: ["tropical_moist", "tropical_dry", "coastal"],
     links: [
       { label: "KoboToolbox", url: "https://www.kobotoolbox.org/" },
       { label: "ODK Collect", url: "https://getodk.org/" },
@@ -160,7 +158,7 @@ const RESOURCES = [
     scales: ["plot", "site"],
     budget: ["low", "medium"],
     expertise: ["community", "technician"],
-    ecosystems: ["tropical_moist", "tropical_dry", "temperate", "agroforestry", "mangrove"],
+    ecosystems: ["tropical_moist", "tropical_dry", "coastal"],
     links: [
       { label: "Fotografit", url: "https://www.fotografit.eu/" },
     ],
@@ -174,7 +172,7 @@ const RESOURCES = [
     scales: ["plot", "site"],
     budget: ["medium", "high"],
     expertise: ["technician", "research"],
-    ecosystems: ["tropical_moist", "tropical_dry", "temperate", "mangrove"],
+    ecosystems: ["tropical_moist", "tropical_dry", "coastal"],
     links: [
       { label: "AudioMoth", url: "https://www.openacousticdevices.info/" },
       { label: "Arbimon", url: "https://arbimon.rfcx.org/" },
@@ -189,7 +187,7 @@ const RESOURCES = [
     scales: ["plot", "site"],
     budget: ["high"],
     expertise: ["research"],
-    ecosystems: ["tropical_moist", "tropical_dry", "temperate", "mangrove"],
+    ecosystems: ["tropical_moist", "tropical_dry", "coastal"],
     links: [
       { label: "eDNA Society", url: "https://ednasociety.org/" },
     ],
@@ -203,7 +201,7 @@ const RESOURCES = [
     scales: ["plot", "site"],
     budget: ["medium", "high"],
     expertise: ["technician", "research"],
-    ecosystems: ["tropical_moist", "tropical_dry", "temperate", "agroforestry"],
+    ecosystems: ["tropical_moist", "tropical_dry"],
     links: [
       { label: "Wildlife Insights", url: "https://www.wildlifeinsights.org/" },
       { label: "MegaDetector", url: "https://github.com/microsoft/CameraTraps" },
@@ -218,7 +216,7 @@ const RESOURCES = [
     scales: ["site", "landscape", "regional"],
     budget: ["low", "medium", "high"],
     expertise: ["community", "technician", "gis", "research"],
-    ecosystems: ["tropical_moist", "tropical_dry", "temperate", "agroforestry", "mangrove"],
+    ecosystems: ["tropical_moist", "tropical_dry", "coastal"],
     links: [
       { label: "Global Forest Watch", url: "https://www.globalforestwatch.org/" },
     ],
@@ -232,7 +230,7 @@ const RESOURCES = [
     scales: ["site", "landscape"],
     budget: ["low", "medium"],
     expertise: ["community", "technician"],
-    ecosystems: ["tropical_moist", "tropical_dry", "agroforestry"],
+    ecosystems: ["tropical_moist", "tropical_dry"],
     links: [
       { label: "TerraMatch", url: "https://www.terramatch.org/" },
     ],
@@ -246,7 +244,7 @@ const RESOURCES = [
     scales: ["plot", "site"],
     budget: ["medium", "high"],
     expertise: ["technician", "research"],
-    ecosystems: ["tropical_moist", "tropical_dry", "temperate", "agroforestry", "mangrove"],
+    ecosystems: ["tropical_moist", "tropical_dry", "coastal"],
     links: [
       { label: "GlobAllomeTree (FAO)", url: "http://www.globallometree.org/" },
       { label: "BIOMASS R package", url: "https://cran.r-project.org/package=BIOMASS" },
@@ -261,7 +259,7 @@ const RESOURCES = [
     scales: ["plot", "site", "landscape"],
     budget: ["low", "medium", "high"],
     expertise: ["community", "technician", "research"],
-    ecosystems: ["tropical_moist", "tropical_dry", "temperate", "agroforestry", "mangrove"],
+    ecosystems: ["tropical_moist", "tropical_dry", "coastal"],
     links: [
       { label: "KoboToolbox", url: "https://www.kobotoolbox.org/" },
       { label: "SurveyCTO", url: "https://www.surveycto.com/" },
@@ -276,7 +274,7 @@ const RESOURCES = [
     scales: ["plot", "site", "landscape", "regional"],
     budget: ["low", "medium", "high"],
     expertise: ["technician", "gis", "research"],
-    ecosystems: ["tropical_moist", "tropical_dry", "temperate", "agroforestry", "mangrove"],
+    ecosystems: ["tropical_moist", "tropical_dry", "coastal"],
     links: [
       { label: "restorationmonitoringtools.org", url: "https://restorationmonitoringtools.org" },
     ],
@@ -290,7 +288,7 @@ const RESOURCES = [
     scales: ["plot", "site", "landscape", "regional"],
     budget: ["low", "medium", "high"],
     expertise: ["technician", "gis", "research"],
-    ecosystems: ["tropical_moist", "tropical_dry", "temperate", "agroforestry", "mangrove"],
+    ecosystems: ["tropical_moist", "tropical_dry", "coastal"],
     links: [
       { label: "openforis.org", url: "https://www.openforis.org" },
     ],
@@ -304,7 +302,7 @@ const RESOURCES = [
     scales: ["site", "landscape", "regional"],
     budget: ["low", "medium"],
     expertise: ["technician", "gis", "research"],
-    ecosystems: ["tropical_moist", "tropical_dry", "temperate", "agroforestry", "mangrove"],
+    ecosystems: ["tropical_moist", "tropical_dry", "coastal"],
     links: [
       { label: "Collect Earth (FAO)", url: "https://www.openforis.org/tools/collect-earth" },
     ],
@@ -318,7 +316,7 @@ const RESOURCES = [
     scales: ["plot", "site", "landscape", "regional"],
     budget: ["low", "medium", "high"],
     expertise: ["technician", "gis", "research"],
-    ecosystems: ["tropical_moist", "tropical_dry", "temperate", "agroforestry", "mangrove"],
+    ecosystems: ["tropical_moist", "tropical_dry", "coastal"],
     links: [
       { label: "UN Decade publication", url: "https://www.decadeonrestoration.org/publications/tools-and-applications-ecosystem-restoration-monitoring" },
     ],
@@ -332,7 +330,7 @@ const RESOURCES = [
     scales: ["plot", "site"],
     budget: ["low", "medium"],
     expertise: ["community", "technician"],
-    ecosystems: ["tropical_moist", "tropical_dry", "temperate", "agroforestry", "mangrove"],
+    ecosystems: ["tropical_moist", "tropical_dry", "coastal"],
     links: [
       { label: "TreeMapper", url: "https://www.plant-for-the-planet.org/treemapper/" },
     ],
@@ -346,7 +344,7 @@ const RESOURCES = [
     scales: ["plot", "site", "landscape"],
     budget: ["low", "medium"],
     expertise: ["community", "technician"],
-    ecosystems: ["tropical_dry", "agroforestry"],
+    ecosystems: ["tropical_dry"],
     links: [
       { label: "Regreening Africa app", url: "https://regreeningafrica.org/in-the-news/the-regreening-africa-app/" },
     ],
@@ -360,7 +358,7 @@ const RESOURCES = [
     scales: ["site", "landscape", "regional"],
     budget: ["medium", "high"],
     expertise: ["technician", "research"],
-    ecosystems: ["tropical_moist", "tropical_dry", "temperate", "agroforestry", "mangrove"],
+    ecosystems: ["tropical_moist", "tropical_dry", "coastal"],
     links: [
       { label: "instrumentl.com", url: "https://www.instrumentl.com" },
     ],
@@ -374,7 +372,7 @@ const RESOURCES = [
     scales: ["site", "landscape", "regional"],
     budget: ["low", "medium"],
     expertise: ["technician", "research"],
-    ecosystems: ["tropical_moist", "tropical_dry", "temperate", "agroforestry", "mangrove"],
+    ecosystems: ["tropical_moist", "tropical_dry", "coastal"],
     links: [
       { label: "liveimpact.org", url: "https://www.liveimpact.org" },
     ],
@@ -388,7 +386,7 @@ const RESOURCES = [
     scales: ["site", "landscape", "regional"],
     budget: ["medium", "high"],
     expertise: ["technician", "research"],
-    ecosystems: ["tropical_moist", "tropical_dry", "temperate", "agroforestry", "mangrove"],
+    ecosystems: ["tropical_moist", "tropical_dry", "coastal"],
     links: [
       { label: "GrantHub Pro", url: "https://www.foundant.com/granthub" },
     ],
@@ -402,7 +400,7 @@ const RESOURCES = [
     scales: ["landscape", "regional"],
     budget: ["high"],
     expertise: ["technician", "research"],
-    ecosystems: ["tropical_moist", "tropical_dry", "temperate", "agroforestry", "mangrove"],
+    ecosystems: ["tropical_moist", "tropical_dry", "coastal"],
     links: [
       { label: "Nonprofit Cloud for Grantmaking", url: "https://www.salesforce.com/nonprofit/grantmaking-software" },
     ],
@@ -754,12 +752,14 @@ function AdvisorCard({ advisor }) {
 }
 
 export default function MonitoringWizard() {
-  const [mode, setMode] = useState("landing"); // landing, wizard, search, results, advisors
+  const [mode, setMode] = useState("landing"); // landing, wizard, search, results, advisors, share
   const [currentStep, setCurrentStep] = useState(0);
   const [answers, setAnswers] = useState({});
   const [searchQuery, setSearchQuery] = useState("");
   const [advisorFilter, setAdvisorFilter] = useState("All");
   const [fadeIn, setFadeIn] = useState(true);
+  const [shareForm, setShareForm] = useState({ name: "", ecosystem: "", tools: "", recommendations: "", contact: "" });
+  const [shareSubmitted, setShareSubmitted] = useState(false);
   const containerRef = useRef(null);
 
   useEffect(() => {
@@ -809,6 +809,8 @@ export default function MonitoringWizard() {
     setCurrentStep(0);
     setAdvisorFilter("All");
     setSearchQuery("");
+    setShareForm({ name: "", ecosystem: "", tools: "", recommendations: "", contact: "" });
+    setShareSubmitted(false);
     setMode("landing");
   };
 
@@ -1017,6 +1019,30 @@ export default function MonitoringWizard() {
               <div style={{ fontWeight: 600, marginBottom: 4 }}>I want advice</div>
               <div style={{ fontSize: 13, fontWeight: 400, color: "#a8a49c" }}>
                 Find advisory organizations like CIFOR-ICRAF, WRI, and SER
+              </div>
+            </button>
+            <button
+              onClick={() => setMode("share")}
+              style={{
+                background: "transparent",
+                color: "#e8e4dc",
+                border: "1px solid rgba(232,228,220,0.2)",
+                padding: "20px 24px",
+                borderRadius: 10,
+                fontSize: 15,
+                fontFamily: "'Source Sans 3', sans-serif",
+                fontWeight: 600,
+                cursor: "pointer",
+                transition: "all 0.2s ease",
+                textAlign: "left",
+              }}
+              onMouseEnter={(e) => (e.currentTarget.style.borderColor = "rgba(232,228,220,0.5)")}
+              onMouseLeave={(e) => (e.currentTarget.style.borderColor = "rgba(232,228,220,0.2)")}
+            >
+              <div style={{ fontSize: 20, marginBottom: 6 }}>💬</div>
+              <div style={{ fontWeight: 600, marginBottom: 4 }}>I have experience to share</div>
+              <div style={{ fontSize: 13, fontWeight: 400, color: "#a8a49c" }}>
+                Tell us what tools and methods have worked for your project
               </div>
             </button>
           </div>
@@ -1401,6 +1427,171 @@ export default function MonitoringWizard() {
             be most useful — short, well-scoped requests get answered. Regional offices (e.g. CIFOR-ICRAF
             Bogor for Indonesia, Nairobi for East Africa) are often more responsive than headquarters.
           </div>
+        </div>
+      )}
+
+      {/* Share Experience */}
+      {mode === "share" && (
+        <div
+          style={{
+            maxWidth: 640,
+            margin: "0 auto",
+            padding: "60px 40px 120px",
+            opacity: fadeIn ? 1 : 0,
+            transform: fadeIn ? "translateY(0)" : "translateY(12px)",
+            transition: "all 0.5s ease",
+          }}
+        >
+          <div
+            style={{
+              fontFamily: "'DM Mono', monospace",
+              fontSize: 12,
+              color: "#2d6b4a",
+              marginBottom: 12,
+              textTransform: "uppercase",
+              letterSpacing: "0.1em",
+            }}
+          >
+            Share your experience
+          </div>
+          <h2
+            style={{
+              fontFamily: "'Fraunces', serif",
+              fontSize: 32,
+              fontWeight: 400,
+              marginBottom: 8,
+              letterSpacing: "-0.01em",
+            }}
+          >
+            What's worked for you?
+          </h2>
+          <p style={{ color: "#6a6660", fontSize: 15, marginBottom: 36, lineHeight: 1.5 }}>
+            Help other practitioners by sharing what monitoring tools and methods have worked in your
+            context — and what you'd recommend.
+          </p>
+
+          {shareSubmitted ? (
+            <div
+              style={{
+                background: "rgba(45,107,74,0.15)",
+                border: "1px solid #2d6b4a",
+                borderRadius: 12,
+                padding: "32px 28px",
+                textAlign: "center",
+              }}
+            >
+              <div style={{ fontSize: 36, marginBottom: 16 }}>✓</div>
+              <h3
+                style={{
+                  fontFamily: "'Fraunces', serif",
+                  fontSize: 22,
+                  fontWeight: 400,
+                  marginBottom: 8,
+                }}
+              >
+                Thank you for sharing
+              </h3>
+              <p style={{ color: "#a8a49c", fontSize: 14, lineHeight: 1.6 }}>
+                Your experience helps build a better resource for the restoration community.
+              </p>
+            </div>
+          ) : (
+            <form
+              onSubmit={(e) => {
+                e.preventDefault();
+                setShareSubmitted(true);
+              }}
+              style={{ display: "flex", flexDirection: "column", gap: 20 }}
+            >
+              {[
+                { key: "name", label: "Name / organization", type: "input" },
+                { key: "ecosystem", label: "Ecosystem type & region", type: "input", placeholder: "e.g. Tropical moist forest, East Kalimantan" },
+                { key: "tools", label: "Tools or methods you've used", type: "textarea", placeholder: "e.g. Drone RGB photogrammetry with OpenDroneMap, permanent sample plots, KoboToolbox for field data..." },
+                { key: "recommendations", label: "What would you recommend to others?", type: "textarea", placeholder: "What worked well? What would you do differently? Any tips for someone starting out?" },
+                { key: "contact", label: "Contact info (optional)", type: "input", placeholder: "Email or website — in case we'd like to follow up" },
+              ].map((field) => (
+                <div key={field.key}>
+                  <label
+                    style={{
+                      display: "block",
+                      fontSize: 13,
+                      fontFamily: "'DM Mono', monospace",
+                      color: "#a8a49c",
+                      marginBottom: 8,
+                    }}
+                  >
+                    {field.label}
+                  </label>
+                  {field.type === "input" ? (
+                    <input
+                      type="text"
+                      value={shareForm[field.key]}
+                      onChange={(e) => setShareForm({ ...shareForm, [field.key]: e.target.value })}
+                      placeholder={field.placeholder || ""}
+                      required={field.key !== "contact"}
+                      style={{
+                        width: "100%",
+                        background: "rgba(232,228,220,0.04)",
+                        border: "1px solid rgba(232,228,220,0.12)",
+                        color: "#e8e4dc",
+                        padding: "12px 16px",
+                        borderRadius: 8,
+                        fontSize: 15,
+                        fontFamily: "'Source Sans 3', sans-serif",
+                        outline: "none",
+                        boxSizing: "border-box",
+                      }}
+                      onFocus={(e) => (e.target.style.borderColor = "#2d6b4a")}
+                      onBlur={(e) => (e.target.style.borderColor = "rgba(232,228,220,0.12)")}
+                    />
+                  ) : (
+                    <textarea
+                      value={shareForm[field.key]}
+                      onChange={(e) => setShareForm({ ...shareForm, [field.key]: e.target.value })}
+                      placeholder={field.placeholder || ""}
+                      required
+                      rows={4}
+                      style={{
+                        width: "100%",
+                        background: "rgba(232,228,220,0.04)",
+                        border: "1px solid rgba(232,228,220,0.12)",
+                        color: "#e8e4dc",
+                        padding: "12px 16px",
+                        borderRadius: 8,
+                        fontSize: 15,
+                        fontFamily: "'Source Sans 3', sans-serif",
+                        outline: "none",
+                        boxSizing: "border-box",
+                        resize: "vertical",
+                      }}
+                      onFocus={(e) => (e.target.style.borderColor = "#2d6b4a")}
+                      onBlur={(e) => (e.target.style.borderColor = "rgba(232,228,220,0.12)")}
+                    />
+                  )}
+                </div>
+              ))}
+              <button
+                type="submit"
+                style={{
+                  background: "#2d6b4a",
+                  color: "#e8e4dc",
+                  border: "none",
+                  padding: "14px 28px",
+                  borderRadius: 8,
+                  fontSize: 15,
+                  fontFamily: "'Source Sans 3', sans-serif",
+                  fontWeight: 600,
+                  cursor: "pointer",
+                  transition: "all 0.2s ease",
+                  alignSelf: "flex-start",
+                }}
+                onMouseEnter={(e) => (e.currentTarget.style.background = "#3a8a60")}
+                onMouseLeave={(e) => (e.currentTarget.style.background = "#2d6b4a")}
+              >
+                Submit
+              </button>
+            </form>
+          )}
         </div>
       )}
     </div>
