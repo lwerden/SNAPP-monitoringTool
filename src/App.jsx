@@ -502,9 +502,69 @@ const ADVISORS = [
 ];
 
 const ADVISOR_CATEGORY_COLORS = {
-  "Research Institutions": { bg: "#1a2a3a", border: "#2d4a6b", text: "#7faacc" },
-  "NGOs & Implementation": { bg: "#1a3a2a", border: "#2d6b4a", text: "#7fccab" },
-  "Standards & Networks": { bg: "#2a1a2a", border: "#6b2d5a", text: "#cc7fbb" },
+  dark: {
+    "Research Institutions": { bg: "#1a2a3a", border: "#2d4a6b", text: "#7faacc" },
+    "NGOs & Implementation": { bg: "#1a3a2a", border: "#2d6b4a", text: "#7fccab" },
+    "Standards & Networks": { bg: "#2a1a2a", border: "#6b2d5a", text: "#cc7fbb" },
+  },
+  light: {
+    "Research Institutions": { bg: "#e0ecf5", border: "#78a4c4", text: "#1a3a5a" },
+    "NGOs & Implementation": { bg: "#e8f5ee", border: "#8bc4a0", text: "#1a5a3a" },
+    "Standards & Networks": { bg: "#f0e0f0", border: "#b878a4", text: "#5a1a4a" },
+  },
+};
+
+const THEMES = {
+  dark: {
+    bg: "#0f0f0e",
+    text: "#e8e4dc",
+    textSecondary: "#a8a49c",
+    textMuted: "#6a6660",
+    accent: "#2d6b4a",
+    accentHover: "#3a8a60",
+    accentBg: "rgba(45,107,74,0.3)",
+    accentBgLight: "rgba(45,107,74,0.15)",
+    accentGradient: "linear-gradient(135deg, #2d6b4a, #1a3a2a)",
+    border: "rgba(232,228,220,0.08)",
+    borderMed: "rgba(232,228,220,0.12)",
+    borderStrong: "rgba(232,228,220,0.15)",
+    cardBorder: "rgba(232,228,220,0.2)",
+    borderHover: "rgba(232,228,220,0.5)",
+    surface: "rgba(232,228,220,0.04)",
+    surfaceMed: "rgba(232,228,220,0.06)",
+    surfaceHover: "rgba(232,228,220,0.08)",
+    surfaceSubtle: "rgba(232,228,220,0.03)",
+    gridLine: "rgba(232,228,220,0.03)",
+    tagBg: "rgba(0,0,0,0.2)",
+    scoreBgHigh: "#2d6b4a",
+    scoreBgMed: "#5a6b2d",
+    scoreBgLow: "#4a3a2d",
+  },
+  light: {
+    bg: "#f8f7f4",
+    text: "#1a1a18",
+    textSecondary: "#5a5750",
+    textMuted: "#8a8680",
+    accent: "#2d6b4a",
+    accentHover: "#3a8a60",
+    accentBg: "rgba(45,107,74,0.12)",
+    accentBgLight: "rgba(45,107,74,0.08)",
+    accentGradient: "linear-gradient(135deg, #3a8a60, #2d6b4a)",
+    border: "rgba(0,0,0,0.08)",
+    borderMed: "rgba(0,0,0,0.12)",
+    borderStrong: "rgba(0,0,0,0.15)",
+    cardBorder: "rgba(0,0,0,0.12)",
+    borderHover: "rgba(0,0,0,0.4)",
+    surface: "rgba(0,0,0,0.03)",
+    surfaceMed: "rgba(0,0,0,0.05)",
+    surfaceHover: "rgba(0,0,0,0.06)",
+    surfaceSubtle: "rgba(0,0,0,0.02)",
+    gridLine: "rgba(0,0,0,0.04)",
+    tagBg: "rgba(0,0,0,0.06)",
+    scoreBgHigh: "#2d6b4a",
+    scoreBgMed: "#7a8a3a",
+    scoreBgLow: "#8a7a5a",
+  },
 };
 
 function scoreResource(resource, answers) {
@@ -536,17 +596,29 @@ function scoreResource(resource, answers) {
 }
 
 const CATEGORY_COLORS = {
-  "Remote Sensing": { bg: "#1a3a2a", border: "#2d6b4a", text: "#7fccab" },
-  "Field Methods": { bg: "#2a2a1a", border: "#6b5f2d", text: "#ccb87f" },
-  Biodiversity: { bg: "#1a2a3a", border: "#2d4a6b", text: "#7faacc" },
-  Platforms: { bg: "#2a1a2a", border: "#6b2d5a", text: "#cc7fbb" },
-  Carbon: { bg: "#1a2a2a", border: "#2d6b6b", text: "#7fcccc" },
-  Social: { bg: "#2a1a1a", border: "#6b3a2d", text: "#cc8f7f" },
-  "Grant Management": { bg: "#1f1a2a", border: "#4a3d6b", text: "#a89fcc" },
+  dark: {
+    "Remote Sensing": { bg: "#1a3a2a", border: "#2d6b4a", text: "#7fccab" },
+    "Field Methods": { bg: "#2a2a1a", border: "#6b5f2d", text: "#ccb87f" },
+    Biodiversity: { bg: "#1a2a3a", border: "#2d4a6b", text: "#7faacc" },
+    Platforms: { bg: "#2a1a2a", border: "#6b2d5a", text: "#cc7fbb" },
+    Carbon: { bg: "#1a2a2a", border: "#2d6b6b", text: "#7fcccc" },
+    Social: { bg: "#2a1a1a", border: "#6b3a2d", text: "#cc8f7f" },
+    "Grant Management": { bg: "#1f1a2a", border: "#4a3d6b", text: "#a89fcc" },
+  },
+  light: {
+    "Remote Sensing": { bg: "#e8f5ee", border: "#8bc4a0", text: "#1a5a3a" },
+    "Field Methods": { bg: "#f5f0e0", border: "#c4b878", text: "#5a4a1a" },
+    Biodiversity: { bg: "#e0ecf5", border: "#78a4c4", text: "#1a3a5a" },
+    Platforms: { bg: "#f0e0f0", border: "#b878a4", text: "#5a1a4a" },
+    Carbon: { bg: "#e0f0f0", border: "#78b8b8", text: "#1a4a4a" },
+    Social: { bg: "#f5e8e0", border: "#c49078", text: "#5a2a1a" },
+    "Grant Management": { bg: "#ece8f5", border: "#9890c4", text: "#3a305a" },
+  },
 };
 
-function ResourceCard({ resource, score }) {
-  const colors = CATEGORY_COLORS[resource.category] || CATEGORY_COLORS["Field Methods"];
+function ResourceCard({ resource, score, t }) {
+  const colorSet = CATEGORY_COLORS[t === THEMES.light ? "light" : "dark"];
+  const colors = colorSet[resource.category] || colorSet["Field Methods"];
   const pct = Math.round(score * 100);
 
   return (
@@ -579,7 +651,7 @@ function ResourceCard({ resource, score }) {
               margin: "4px 0 0",
               fontSize: 18,
               fontFamily: "'Fraunces', serif",
-              color: "#e8e4dc",
+              color: t.text,
               fontWeight: 500,
             }}
           >
@@ -588,12 +660,12 @@ function ResourceCard({ resource, score }) {
         </div>
         <div
           style={{
-            background: pct >= 80 ? "#2d6b4a" : pct >= 60 ? "#5a6b2d" : "#4a3a2d",
+            background: pct >= 80 ? t.scoreBgHigh : pct >= 60 ? t.scoreBgMed : t.scoreBgLow,
             borderRadius: 20,
             padding: "4px 12px",
             fontSize: 13,
             fontFamily: "'DM Mono', monospace",
-            color: "#e8e4dc",
+            color: t.text,
             whiteSpace: "nowrap",
             marginLeft: 12,
           }}
@@ -605,7 +677,7 @@ function ResourceCard({ resource, score }) {
         style={{
           fontSize: 14,
           lineHeight: 1.6,
-          color: "#a8a49c",
+          color: t.textSecondary,
           margin: "8px 0 12px",
           fontFamily: "'Source Sans 3', sans-serif",
         }}
@@ -631,7 +703,7 @@ function ResourceCard({ resource, score }) {
             }}
             onMouseEnter={(e) => {
               e.target.style.background = colors.border;
-              e.target.style.color = "#e8e4dc";
+              e.target.style.color = t.text;
             }}
             onMouseLeave={(e) => {
               e.target.style.background = "transparent";
@@ -646,8 +718,9 @@ function ResourceCard({ resource, score }) {
   );
 }
 
-function AdvisorCard({ advisor }) {
-  const colors = ADVISOR_CATEGORY_COLORS[advisor.category] || ADVISOR_CATEGORY_COLORS["Research Institutions"];
+function AdvisorCard({ advisor, t }) {
+  const colorSet = ADVISOR_CATEGORY_COLORS[t === THEMES.light ? "light" : "dark"];
+  const colors = colorSet[advisor.category] || colorSet["Research Institutions"];
 
   return (
     <div
@@ -676,7 +749,7 @@ function AdvisorCard({ advisor }) {
           margin: "4px 0 0",
           fontSize: 18,
           fontFamily: "'Fraunces', serif",
-          color: "#e8e4dc",
+          color: t.text,
           fontWeight: 500,
         }}
       >
@@ -686,7 +759,7 @@ function AdvisorCard({ advisor }) {
         style={{
           fontSize: 14,
           lineHeight: 1.6,
-          color: "#a8a49c",
+          color: t.textSecondary,
           margin: "8px 0 12px",
           fontFamily: "'Source Sans 3', sans-serif",
         }}
@@ -701,7 +774,7 @@ function AdvisorCard({ advisor }) {
               fontSize: 11,
               fontFamily: "'DM Mono', monospace",
               color: colors.text,
-              background: "rgba(0,0,0,0.2)",
+              background: t.tagBg,
               border: `1px solid ${colors.border}`,
               borderRadius: 4,
               padding: "2px 8px",
@@ -715,7 +788,7 @@ function AdvisorCard({ advisor }) {
         style={{
           fontSize: 12,
           fontFamily: "'DM Mono', monospace",
-          color: "#6a6660",
+          color: t.textMuted,
           marginBottom: 10,
         }}
       >
@@ -738,7 +811,7 @@ function AdvisorCard({ advisor }) {
         }}
         onMouseEnter={(e) => {
           e.target.style.background = colors.border;
-          e.target.style.color = "#e8e4dc";
+          e.target.style.color = t.text;
         }}
         onMouseLeave={(e) => {
           e.target.style.background = "transparent";
@@ -760,7 +833,9 @@ export default function MonitoringWizard() {
   const [fadeIn, setFadeIn] = useState(true);
   const [shareForm, setShareForm] = useState({ name: "", ecosystem: "", tools: "", recommendations: "", contact: "" });
   const [shareSubmitted, setShareSubmitted] = useState(false);
+  const [light, setLight] = useState(false);
   const containerRef = useRef(null);
+  const t = THEMES[light ? "light" : "dark"];
 
   useEffect(() => {
     setFadeIn(false);
@@ -822,8 +897,8 @@ export default function MonitoringWizard() {
       ref={containerRef}
       style={{
         minHeight: "100vh",
-        background: "#0f0f0e",
-        color: "#e8e4dc",
+        background: t.bg,
+        color: t.text,
         fontFamily: "'Source Sans 3', sans-serif",
         position: "relative",
         overflow: "hidden",
@@ -835,7 +910,7 @@ export default function MonitoringWizard() {
           position: "fixed",
           inset: 0,
           backgroundImage:
-            "linear-gradient(rgba(232,228,220,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(232,228,220,0.03) 1px, transparent 1px)",
+            `linear-gradient(${t.gridLine} 1px, transparent 1px), linear-gradient(90deg, ${t.gridLine} 1px, transparent 1px)`,
           backgroundSize: "60px 60px",
           pointerEvents: "none",
         }}
@@ -848,7 +923,7 @@ export default function MonitoringWizard() {
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
-          borderBottom: "1px solid rgba(232,228,220,0.08)",
+          borderBottom: `1px solid ${t.border}`,
           position: "relative",
           zIndex: 10,
         }}
@@ -862,7 +937,7 @@ export default function MonitoringWizard() {
               width: 32,
               height: 32,
               borderRadius: 8,
-              background: "linear-gradient(135deg, #2d6b4a, #1a3a2a)",
+              background: t.accentGradient,
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
@@ -882,23 +957,41 @@ export default function MonitoringWizard() {
             Forest Monitoring Finder
           </span>
         </div>
-        {mode !== "landing" && (
+        <div style={{ display: "flex", gap: 8, alignItems: "center" }}>
+          {mode !== "landing" && (
+            <button
+              onClick={reset}
+              style={{
+                background: "none",
+                border: `1px solid ${t.borderStrong}`,
+                color: t.textSecondary,
+                padding: "6px 16px",
+                borderRadius: 6,
+                cursor: "pointer",
+                fontFamily: "'DM Mono', monospace",
+                fontSize: 12,
+              }}
+            >
+              Start over
+            </button>
+          )}
           <button
-            onClick={reset}
+            onClick={() => setLight(!light)}
             style={{
               background: "none",
-              border: "1px solid rgba(232,228,220,0.15)",
-              color: "#a8a49c",
-              padding: "6px 16px",
+              border: `1px solid ${t.borderStrong}`,
+              color: t.textSecondary,
+              padding: "6px 12px",
               borderRadius: 6,
               cursor: "pointer",
               fontFamily: "'DM Mono', monospace",
               fontSize: 12,
+              transition: "all 0.2s ease",
             }}
           >
-            Start over
+            {light ? "◐ Dark" : "◑ Light"}
           </button>
-        )}
+        </div>
       </header>
 
       {/* Landing */}
@@ -930,7 +1023,7 @@ export default function MonitoringWizard() {
           <p
             style={{
               fontSize: 17,
-              color: "#a8a49c",
+              color: t.textSecondary,
               lineHeight: 1.7,
               marginBottom: 48,
               maxWidth: 480,
@@ -952,8 +1045,8 @@ export default function MonitoringWizard() {
             <button
               onClick={() => setMode("wizard")}
               style={{
-                background: "#2d6b4a",
-                color: "#e8e4dc",
+                background: t.accent,
+                color: t.text,
                 border: "none",
                 padding: "20px 24px",
                 borderRadius: 10,
@@ -964,8 +1057,8 @@ export default function MonitoringWizard() {
                 transition: "all 0.2s ease",
                 textAlign: "left",
               }}
-              onMouseEnter={(e) => (e.currentTarget.style.background = "#3a8a60")}
-              onMouseLeave={(e) => (e.currentTarget.style.background = "#2d6b4a")}
+              onMouseEnter={(e) => (e.currentTarget.style.background = t.accentHover)}
+              onMouseLeave={(e) => (e.currentTarget.style.background = t.accent)}
             >
               <div style={{ fontSize: 20, marginBottom: 6 }}>🧭</div>
               <div style={{ fontWeight: 600, marginBottom: 4 }}>Guide me →</div>
@@ -977,8 +1070,8 @@ export default function MonitoringWizard() {
               onClick={() => setMode("search")}
               style={{
                 background: "transparent",
-                color: "#e8e4dc",
-                border: "1px solid rgba(232,228,220,0.2)",
+                color: t.text,
+                border: `1px solid ${t.cardBorder}`,
                 padding: "20px 24px",
                 borderRadius: 10,
                 fontSize: 15,
@@ -988,12 +1081,12 @@ export default function MonitoringWizard() {
                 transition: "all 0.2s ease",
                 textAlign: "left",
               }}
-              onMouseEnter={(e) => (e.currentTarget.style.borderColor = "rgba(232,228,220,0.5)")}
-              onMouseLeave={(e) => (e.currentTarget.style.borderColor = "rgba(232,228,220,0.2)")}
+              onMouseEnter={(e) => (e.currentTarget.style.borderColor = t.borderHover)}
+              onMouseLeave={(e) => (e.currentTarget.style.borderColor = t.cardBorder)}
             >
               <div style={{ fontSize: 20, marginBottom: 6 }}>🔎</div>
               <div style={{ fontWeight: 600, marginBottom: 4 }}>Search tools</div>
-              <div style={{ fontSize: 13, fontWeight: 400, color: "#a8a49c" }}>
+              <div style={{ fontSize: 13, fontWeight: 400, color: t.textSecondary }}>
                 Browse the full database of monitoring tools and methods
               </div>
             </button>
@@ -1001,8 +1094,8 @@ export default function MonitoringWizard() {
               onClick={() => setMode("advisors")}
               style={{
                 background: "transparent",
-                color: "#e8e4dc",
-                border: "1px solid rgba(232,228,220,0.2)",
+                color: t.text,
+                border: `1px solid ${t.cardBorder}`,
                 padding: "20px 24px",
                 borderRadius: 10,
                 fontSize: 15,
@@ -1012,12 +1105,12 @@ export default function MonitoringWizard() {
                 transition: "all 0.2s ease",
                 textAlign: "left",
               }}
-              onMouseEnter={(e) => (e.currentTarget.style.borderColor = "rgba(232,228,220,0.5)")}
-              onMouseLeave={(e) => (e.currentTarget.style.borderColor = "rgba(232,228,220,0.2)")}
+              onMouseEnter={(e) => (e.currentTarget.style.borderColor = t.borderHover)}
+              onMouseLeave={(e) => (e.currentTarget.style.borderColor = t.cardBorder)}
             >
               <div style={{ fontSize: 20, marginBottom: 6 }}>🤝</div>
               <div style={{ fontWeight: 600, marginBottom: 4 }}>I want advice</div>
-              <div style={{ fontSize: 13, fontWeight: 400, color: "#a8a49c" }}>
+              <div style={{ fontSize: 13, fontWeight: 400, color: t.textSecondary }}>
                 Find advisory organizations like CIFOR-ICRAF, WRI, and SER
               </div>
             </button>
@@ -1025,8 +1118,8 @@ export default function MonitoringWizard() {
               onClick={() => setMode("share")}
               style={{
                 background: "transparent",
-                color: "#e8e4dc",
-                border: "1px solid rgba(232,228,220,0.2)",
+                color: t.text,
+                border: `1px solid ${t.cardBorder}`,
                 padding: "20px 24px",
                 borderRadius: 10,
                 fontSize: 15,
@@ -1036,12 +1129,12 @@ export default function MonitoringWizard() {
                 transition: "all 0.2s ease",
                 textAlign: "left",
               }}
-              onMouseEnter={(e) => (e.currentTarget.style.borderColor = "rgba(232,228,220,0.5)")}
-              onMouseLeave={(e) => (e.currentTarget.style.borderColor = "rgba(232,228,220,0.2)")}
+              onMouseEnter={(e) => (e.currentTarget.style.borderColor = t.borderHover)}
+              onMouseLeave={(e) => (e.currentTarget.style.borderColor = t.cardBorder)}
             >
               <div style={{ fontSize: 20, marginBottom: 6 }}>💬</div>
               <div style={{ fontWeight: 600, marginBottom: 4 }}>I have experience to share</div>
-              <div style={{ fontSize: 13, fontWeight: 400, color: "#a8a49c" }}>
+              <div style={{ fontSize: 13, fontWeight: 400, color: t.textSecondary }}>
                 Tell us what tools and methods have worked for your project
               </div>
             </button>
@@ -1070,7 +1163,7 @@ export default function MonitoringWizard() {
                   flex: 1,
                   height: 3,
                   borderRadius: 2,
-                  background: i <= currentStep ? "#2d6b4a" : "rgba(232,228,220,0.1)",
+                  background: i <= currentStep ? t.accent : t.border,
                   transition: "background 0.3s ease",
                 }}
               />
@@ -1081,7 +1174,7 @@ export default function MonitoringWizard() {
             style={{
               fontFamily: "'DM Mono', monospace",
               fontSize: 12,
-              color: "#6a6660",
+              color: t.textMuted,
               marginBottom: 12,
               textTransform: "uppercase",
               letterSpacing: "0.1em",
@@ -1102,7 +1195,7 @@ export default function MonitoringWizard() {
           >
             {currentQuestion.question}
           </h2>
-          <p style={{ color: "#6a6660", fontSize: 15, marginBottom: 36, lineHeight: 1.5 }}>
+          <p style={{ color: t.textMuted, fontSize: 15, marginBottom: 36, lineHeight: 1.5 }}>
             {currentQuestion.subtitle}
           </p>
 
@@ -1114,13 +1207,13 @@ export default function MonitoringWizard() {
                 style={{
                   background:
                     answers[currentQuestion.id] === opt.value
-                      ? "rgba(45,107,74,0.3)"
-                      : "rgba(232,228,220,0.04)",
+                      ? t.accentBg
+                      : t.surface,
                   border:
                     answers[currentQuestion.id] === opt.value
-                      ? "1px solid #2d6b4a"
-                      : "1px solid rgba(232,228,220,0.08)",
-                  color: "#e8e4dc",
+                      ? `1px solid ${t.accent}`
+                      : `1px solid ${t.border}`,
+                  color: t.text,
                   padding: "16px 20px",
                   borderRadius: 10,
                   fontSize: 15,
@@ -1134,14 +1227,14 @@ export default function MonitoringWizard() {
                 }}
                 onMouseEnter={(e) => {
                   if (answers[currentQuestion.id] !== opt.value) {
-                    e.currentTarget.style.background = "rgba(232,228,220,0.08)";
-                    e.currentTarget.style.borderColor = "rgba(232,228,220,0.15)";
+                    e.currentTarget.style.background = t.surfaceHover;
+                    e.currentTarget.style.borderColor = t.borderStrong;
                   }
                 }}
                 onMouseLeave={(e) => {
                   if (answers[currentQuestion.id] !== opt.value) {
-                    e.currentTarget.style.background = "rgba(232,228,220,0.04)";
-                    e.currentTarget.style.borderColor = "rgba(232,228,220,0.08)";
+                    e.currentTarget.style.background = t.surface;
+                    e.currentTarget.style.borderColor = t.border;
                   }
                 }}
               >
@@ -1157,7 +1250,7 @@ export default function MonitoringWizard() {
               style={{
                 background: "none",
                 border: "none",
-                color: "#6a6660",
+                color: t.textMuted,
                 marginTop: 24,
                 cursor: "pointer",
                 fontFamily: "'DM Mono', monospace",
@@ -1186,7 +1279,7 @@ export default function MonitoringWizard() {
             style={{
               fontFamily: "'DM Mono', monospace",
               fontSize: 12,
-              color: "#2d6b4a",
+              color: t.accent,
               marginBottom: 12,
               textTransform: "uppercase",
               letterSpacing: "0.1em",
@@ -1205,7 +1298,7 @@ export default function MonitoringWizard() {
           >
             Here's what fits your project
           </h2>
-          <p style={{ color: "#6a6660", fontSize: 15, marginBottom: 12, lineHeight: 1.5 }}>
+          <p style={{ color: t.textMuted, fontSize: 15, marginBottom: 12, lineHeight: 1.5 }}>
             Based on your answers, ranked by relevance. Tools with less than 40% match are dimmed.
           </p>
 
@@ -1220,9 +1313,9 @@ export default function MonitoringWizard() {
                   style={{
                     fontSize: 12,
                     fontFamily: "'DM Mono', monospace",
-                    color: "#a8a49c",
-                    background: "rgba(232,228,220,0.06)",
-                    border: "1px solid rgba(232,228,220,0.08)",
+                    color: t.textSecondary,
+                    background: t.surfaceMed,
+                    border: `1px solid ${t.border}`,
                     borderRadius: 20,
                     padding: "4px 12px",
                   }}
@@ -1234,7 +1327,7 @@ export default function MonitoringWizard() {
           </div>
 
           {getResults().map(({ resource, score }) => (
-            <ResourceCard key={resource.id} resource={resource} score={score} />
+            <ResourceCard key={resource.id} resource={resource} score={score} t={t} />
           ))}
 
           <div style={{ marginTop: 32, textAlign: "center", display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap" }}>
@@ -1242,8 +1335,8 @@ export default function MonitoringWizard() {
               onClick={() => setMode("search")}
               style={{
                 background: "none",
-                border: "1px solid rgba(232,228,220,0.15)",
-                color: "#a8a49c",
+                border: `1px solid ${t.borderStrong}`,
+                color: t.textSecondary,
                 padding: "10px 24px",
                 borderRadius: 8,
                 cursor: "pointer",
@@ -1257,8 +1350,8 @@ export default function MonitoringWizard() {
               onClick={() => setMode("advisors")}
               style={{
                 background: "none",
-                border: "1px solid rgba(232,228,220,0.15)",
-                color: "#a8a49c",
+                border: `1px solid ${t.borderStrong}`,
+                color: t.textSecondary,
                 padding: "10px 24px",
                 borderRadius: 8,
                 cursor: "pointer",
@@ -1303,9 +1396,9 @@ export default function MonitoringWizard() {
             autoFocus
             style={{
               width: "100%",
-              background: "rgba(232,228,220,0.04)",
-              border: "1px solid rgba(232,228,220,0.12)",
-              color: "#e8e4dc",
+              background: t.surface,
+              border: `1px solid ${t.borderMed}`,
+              color: t.text,
               padding: "14px 20px",
               borderRadius: 10,
               fontSize: 16,
@@ -1314,15 +1407,15 @@ export default function MonitoringWizard() {
               outline: "none",
               boxSizing: "border-box",
             }}
-            onFocus={(e) => (e.target.style.borderColor = "#2d6b4a")}
-            onBlur={(e) => (e.target.style.borderColor = "rgba(232,228,220,0.12)")}
+            onFocus={(e) => (e.target.style.borderColor = t.accent)}
+            onBlur={(e) => (e.target.style.borderColor = t.borderMed)}
           />
 
           <div
             style={{
               fontFamily: "'DM Mono', monospace",
               fontSize: 12,
-              color: "#6a6660",
+              color: t.textMuted,
               marginBottom: 16,
             }}
           >
@@ -1331,7 +1424,7 @@ export default function MonitoringWizard() {
           </div>
 
           {getSearchResults().map(({ resource, score }) => (
-            <ResourceCard key={resource.id} resource={resource} score={score} />
+            <ResourceCard key={resource.id} resource={resource} score={score} t={t} />
           ))}
         </div>
       )}
@@ -1352,7 +1445,7 @@ export default function MonitoringWizard() {
             style={{
               fontFamily: "'DM Mono', monospace",
               fontSize: 12,
-              color: "#2d6b4a",
+              color: t.accent,
               marginBottom: 12,
               textTransform: "uppercase",
               letterSpacing: "0.1em",
@@ -1371,7 +1464,7 @@ export default function MonitoringWizard() {
           >
             Who to talk to
           </h2>
-          <p style={{ color: "#6a6660", fontSize: 15, marginBottom: 28, lineHeight: 1.5 }}>
+          <p style={{ color: t.textMuted, fontSize: 15, marginBottom: 28, lineHeight: 1.5 }}>
             Tools and methods only get you so far. These organizations offer technical guidance,
             field experience, peer networks, and pathways to funding — choose based on the kind of
             help you're looking for.
@@ -1386,9 +1479,9 @@ export default function MonitoringWizard() {
                   key={cat}
                   onClick={() => setAdvisorFilter(cat)}
                   style={{
-                    background: active ? "rgba(45,107,74,0.3)" : "rgba(232,228,220,0.04)",
-                    border: active ? "1px solid #2d6b4a" : "1px solid rgba(232,228,220,0.08)",
-                    color: active ? "#e8e4dc" : "#a8a49c",
+                    background: active ? t.accentBg : t.surface,
+                    border: active ? `1px solid ${t.accent}` : `1px solid ${t.border}`,
+                    color: active ? t.text : t.textSecondary,
                     padding: "6px 14px",
                     borderRadius: 20,
                     fontSize: 13,
@@ -1404,22 +1497,22 @@ export default function MonitoringWizard() {
           </div>
 
           {getFilteredAdvisors().map((advisor) => (
-            <AdvisorCard key={advisor.id} advisor={advisor} />
+            <AdvisorCard key={advisor.id} advisor={advisor} t={t} />
           ))}
 
           <div
             style={{
               marginTop: 32,
               padding: 20,
-              background: "rgba(232,228,220,0.03)",
-              border: "1px dashed rgba(232,228,220,0.12)",
+              background: t.surfaceSubtle,
+              border: `1px dashed ${t.borderMed}`,
               borderRadius: 10,
               fontSize: 13,
-              color: "#a8a49c",
+              color: t.textSecondary,
               lineHeight: 1.6,
             }}
           >
-            <strong style={{ color: "#e8e4dc", fontFamily: "'Fraunces', serif", fontWeight: 500 }}>
+            <strong style={{ color: t.text, fontFamily: "'Fraunces', serif", fontWeight: 500 }}>
               A note on choosing advisors:
             </strong>{" "}
             Most of these organizations are responsive to direct outreach when the ask is specific.
@@ -1446,7 +1539,7 @@ export default function MonitoringWizard() {
             style={{
               fontFamily: "'DM Mono', monospace",
               fontSize: 12,
-              color: "#2d6b4a",
+              color: t.accent,
               marginBottom: 12,
               textTransform: "uppercase",
               letterSpacing: "0.1em",
@@ -1465,7 +1558,7 @@ export default function MonitoringWizard() {
           >
             What's worked for you?
           </h2>
-          <p style={{ color: "#6a6660", fontSize: 15, marginBottom: 36, lineHeight: 1.5 }}>
+          <p style={{ color: t.textMuted, fontSize: 15, marginBottom: 36, lineHeight: 1.5 }}>
             Help other practitioners by sharing what monitoring tools and methods have worked in your
             context — and what you'd recommend.
           </p>
@@ -1473,8 +1566,8 @@ export default function MonitoringWizard() {
           {shareSubmitted ? (
             <div
               style={{
-                background: "rgba(45,107,74,0.15)",
-                border: "1px solid #2d6b4a",
+                background: t.accentBgLight,
+                border: `1px solid ${t.accent}`,
                 borderRadius: 12,
                 padding: "32px 28px",
                 textAlign: "center",
@@ -1491,7 +1584,7 @@ export default function MonitoringWizard() {
               >
                 Thank you for sharing
               </h3>
-              <p style={{ color: "#a8a49c", fontSize: 14, lineHeight: 1.6 }}>
+              <p style={{ color: t.textSecondary, fontSize: 14, lineHeight: 1.6 }}>
                 Your experience helps build a better resource for the restoration community.
               </p>
             </div>
@@ -1516,7 +1609,7 @@ export default function MonitoringWizard() {
                       display: "block",
                       fontSize: 13,
                       fontFamily: "'DM Mono', monospace",
-                      color: "#a8a49c",
+                      color: t.textSecondary,
                       marginBottom: 8,
                     }}
                   >
@@ -1531,9 +1624,9 @@ export default function MonitoringWizard() {
                       required={field.key !== "contact"}
                       style={{
                         width: "100%",
-                        background: "rgba(232,228,220,0.04)",
-                        border: "1px solid rgba(232,228,220,0.12)",
-                        color: "#e8e4dc",
+                        background: t.surface,
+                        border: `1px solid ${t.borderMed}`,
+                        color: t.text,
                         padding: "12px 16px",
                         borderRadius: 8,
                         fontSize: 15,
@@ -1541,8 +1634,8 @@ export default function MonitoringWizard() {
                         outline: "none",
                         boxSizing: "border-box",
                       }}
-                      onFocus={(e) => (e.target.style.borderColor = "#2d6b4a")}
-                      onBlur={(e) => (e.target.style.borderColor = "rgba(232,228,220,0.12)")}
+                      onFocus={(e) => (e.target.style.borderColor = t.accent)}
+                      onBlur={(e) => (e.target.style.borderColor = t.borderMed)}
                     />
                   ) : (
                     <textarea
@@ -1553,9 +1646,9 @@ export default function MonitoringWizard() {
                       rows={4}
                       style={{
                         width: "100%",
-                        background: "rgba(232,228,220,0.04)",
-                        border: "1px solid rgba(232,228,220,0.12)",
-                        color: "#e8e4dc",
+                        background: t.surface,
+                        border: `1px solid ${t.borderMed}`,
+                        color: t.text,
                         padding: "12px 16px",
                         borderRadius: 8,
                         fontSize: 15,
@@ -1564,8 +1657,8 @@ export default function MonitoringWizard() {
                         boxSizing: "border-box",
                         resize: "vertical",
                       }}
-                      onFocus={(e) => (e.target.style.borderColor = "#2d6b4a")}
-                      onBlur={(e) => (e.target.style.borderColor = "rgba(232,228,220,0.12)")}
+                      onFocus={(e) => (e.target.style.borderColor = t.accent)}
+                      onBlur={(e) => (e.target.style.borderColor = t.borderMed)}
                     />
                   )}
                 </div>
@@ -1573,8 +1666,8 @@ export default function MonitoringWizard() {
               <button
                 type="submit"
                 style={{
-                  background: "#2d6b4a",
-                  color: "#e8e4dc",
+                  background: t.accent,
+                  color: t.text,
                   border: "none",
                   padding: "14px 28px",
                   borderRadius: 8,
@@ -1585,8 +1678,8 @@ export default function MonitoringWizard() {
                   transition: "all 0.2s ease",
                   alignSelf: "flex-start",
                 }}
-                onMouseEnter={(e) => (e.currentTarget.style.background = "#3a8a60")}
-                onMouseLeave={(e) => (e.currentTarget.style.background = "#2d6b4a")}
+                onMouseEnter={(e) => (e.currentTarget.style.background = t.accentHover)}
+                onMouseLeave={(e) => (e.currentTarget.style.background = t.accent)}
               >
                 Submit
               </button>
