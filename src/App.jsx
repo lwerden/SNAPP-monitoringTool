@@ -32,7 +32,8 @@ const QUESTIONS = [
     options: [
       { label: "Tropical moist forest", value: "tropical_moist", icon: "🌴" },
       { label: "Tropical dry forest", value: "tropical_dry", icon: "🏜️" },
-      { label: "Coastal", value: "coastal", icon: "🌊" },
+      { label: "Coastal / mangrove", value: "coastal", icon: "🌊" },
+      { label: "Savanna", value: "savanna", icon: "🌿" },
     ],
   },
   {
@@ -67,7 +68,7 @@ const RESOURCES = [
     scales: ["plot", "site"],
     budget: ["high"],
     expertise: ["gis", "research"],
-    ecosystems: ["tropical_moist", "tropical_dry"],
+    ecosystems: ["tropical_moist","tropical_dry","savanna"],
     links: [
       { label: "lidR package", url: "https://r-lidar.github.io/lidR/" },
       { label: "PDAL pipeline tools", url: "https://pdal.io" },
@@ -82,7 +83,7 @@ const RESOURCES = [
     scales: ["plot", "site"],
     budget: ["medium", "high"],
     expertise: ["gis", "research"],
-    ecosystems: ["tropical_moist", "tropical_dry", "coastal"],
+    ecosystems: ["tropical_moist","tropical_dry","coastal","savanna"],
     links: [
       { label: "OpenDroneMap", url: "https://www.opendronemap.org/" },
       { label: "WebODM", url: "https://www.opendronemap.org/webodm/" },
@@ -97,7 +98,7 @@ const RESOURCES = [
     scales: ["site", "landscape", "regional"],
     budget: ["low", "medium", "high"],
     expertise: ["gis", "research"],
-    ecosystems: ["tropical_moist", "tropical_dry", "coastal"],
+    ecosystems: ["tropical_moist","tropical_dry","coastal","savanna"],
     links: [
       { label: "Google Earth Engine", url: "https://earthengine.google.com/" },
       { label: "SEPAL (FAO)", url: "https://sepal.io/" },
@@ -113,7 +114,7 @@ const RESOURCES = [
     scales: ["site", "landscape"],
     budget: ["high"],
     expertise: ["gis", "research"],
-    ecosystems: ["tropical_moist", "tropical_dry", "coastal"],
+    ecosystems: ["tropical_moist","tropical_dry","coastal","savanna"],
     links: [
       { label: "Planet Explorer", url: "https://www.planet.com/explorer/" },
     ],
@@ -127,7 +128,7 @@ const RESOURCES = [
     scales: ["plot", "site"],
     budget: ["medium", "high"],
     expertise: ["technician", "research"],
-    ecosystems: ["tropical_moist", "tropical_dry", "coastal"],
+    ecosystems: ["tropical_moist","tropical_dry","coastal","savanna"],
     links: [
       { label: "RAINFOR protocols", url: "https://rainfor.org/" },
       { label: "Open Foris", url: "https://openforis.org/" },
@@ -142,7 +143,7 @@ const RESOURCES = [
     scales: ["plot", "site"],
     budget: ["low", "medium"],
     expertise: ["community", "technician"],
-    ecosystems: ["tropical_moist", "tropical_dry", "coastal"],
+    ecosystems: ["tropical_moist","tropical_dry","coastal","savanna"],
     links: [
       { label: "KoboToolbox", url: "https://www.kobotoolbox.org/" },
       { label: "ODK Collect", url: "https://getodk.org/" },
@@ -158,7 +159,7 @@ const RESOURCES = [
     scales: ["plot", "site"],
     budget: ["low", "medium"],
     expertise: ["community", "technician"],
-    ecosystems: ["tropical_moist", "tropical_dry", "coastal"],
+    ecosystems: ["tropical_moist","tropical_dry","coastal","savanna"],
     links: [
       { label: "Fotografit", url: "https://www.fotografit.eu/" },
     ],
@@ -172,7 +173,7 @@ const RESOURCES = [
     scales: ["plot", "site"],
     budget: ["medium", "high"],
     expertise: ["technician", "research"],
-    ecosystems: ["tropical_moist", "tropical_dry", "coastal"],
+    ecosystems: ["tropical_moist","tropical_dry","coastal","savanna"],
     links: [
       { label: "AudioMoth", url: "https://www.openacousticdevices.info/" },
       { label: "Arbimon", url: "https://arbimon.rfcx.org/" },
@@ -187,7 +188,7 @@ const RESOURCES = [
     scales: ["plot", "site"],
     budget: ["high"],
     expertise: ["research"],
-    ecosystems: ["tropical_moist", "tropical_dry", "coastal"],
+    ecosystems: ["tropical_moist","tropical_dry","coastal"],
     links: [
       { label: "eDNA Society", url: "https://ednasociety.org/" },
     ],
@@ -201,7 +202,7 @@ const RESOURCES = [
     scales: ["plot", "site"],
     budget: ["medium", "high"],
     expertise: ["technician", "research"],
-    ecosystems: ["tropical_moist", "tropical_dry"],
+    ecosystems: ["tropical_moist","tropical_dry","savanna"],
     links: [
       { label: "Wildlife Insights", url: "https://www.wildlifeinsights.org/" },
       { label: "MegaDetector", url: "https://github.com/microsoft/CameraTraps" },
@@ -216,7 +217,7 @@ const RESOURCES = [
     scales: ["site", "landscape", "regional"],
     budget: ["low", "medium", "high"],
     expertise: ["community", "technician", "gis", "research"],
-    ecosystems: ["tropical_moist", "tropical_dry", "coastal"],
+    ecosystems: ["tropical_moist","tropical_dry","coastal","savanna"],
     links: [
       { label: "Global Forest Watch", url: "https://www.globalforestwatch.org/" },
     ],
@@ -230,7 +231,7 @@ const RESOURCES = [
     scales: ["site", "landscape"],
     budget: ["low", "medium"],
     expertise: ["community", "technician"],
-    ecosystems: ["tropical_moist", "tropical_dry"],
+    ecosystems: ["tropical_moist","tropical_dry","savanna"],
     links: [
       { label: "TerraMatch", url: "https://www.terramatch.org/" },
     ],
@@ -244,7 +245,7 @@ const RESOURCES = [
     scales: ["plot", "site"],
     budget: ["medium", "high"],
     expertise: ["technician", "research"],
-    ecosystems: ["tropical_moist", "tropical_dry", "coastal"],
+    ecosystems: ["tropical_moist","tropical_dry","coastal","savanna"],
     links: [
       { label: "GlobAllomeTree (FAO)", url: "http://www.globallometree.org/" },
       { label: "BIOMASS R package", url: "https://cran.r-project.org/package=BIOMASS" },
@@ -259,7 +260,7 @@ const RESOURCES = [
     scales: ["plot", "site", "landscape"],
     budget: ["low", "medium", "high"],
     expertise: ["community", "technician", "research"],
-    ecosystems: ["tropical_moist", "tropical_dry", "coastal"],
+    ecosystems: ["tropical_moist","tropical_dry","coastal","savanna"],
     links: [
       { label: "KoboToolbox", url: "https://www.kobotoolbox.org/" },
       { label: "SurveyCTO", url: "https://www.surveycto.com/" },
@@ -274,7 +275,7 @@ const RESOURCES = [
     scales: ["plot", "site", "landscape", "regional"],
     budget: ["low", "medium", "high"],
     expertise: ["technician", "gis", "research"],
-    ecosystems: ["tropical_moist", "tropical_dry", "coastal"],
+    ecosystems: ["tropical_moist","tropical_dry","coastal","savanna"],
     links: [
       { label: "restorationmonitoringtools.org", url: "https://restorationmonitoringtools.org" },
     ],
@@ -288,7 +289,7 @@ const RESOURCES = [
     scales: ["plot", "site", "landscape", "regional"],
     budget: ["low", "medium", "high"],
     expertise: ["technician", "gis", "research"],
-    ecosystems: ["tropical_moist", "tropical_dry", "coastal"],
+    ecosystems: ["tropical_moist","tropical_dry","coastal","savanna"],
     links: [
       { label: "openforis.org", url: "https://www.openforis.org" },
     ],
@@ -302,7 +303,7 @@ const RESOURCES = [
     scales: ["site", "landscape", "regional"],
     budget: ["low", "medium"],
     expertise: ["technician", "gis", "research"],
-    ecosystems: ["tropical_moist", "tropical_dry", "coastal"],
+    ecosystems: ["tropical_moist","tropical_dry","coastal","savanna"],
     links: [
       { label: "Collect Earth (FAO)", url: "https://www.openforis.org/tools/collect-earth" },
     ],
@@ -316,7 +317,7 @@ const RESOURCES = [
     scales: ["plot", "site", "landscape", "regional"],
     budget: ["low", "medium", "high"],
     expertise: ["technician", "gis", "research"],
-    ecosystems: ["tropical_moist", "tropical_dry", "coastal"],
+    ecosystems: ["tropical_moist","tropical_dry","coastal","savanna"],
     links: [
       { label: "UN Decade publication", url: "https://www.decadeonrestoration.org/publications/tools-and-applications-ecosystem-restoration-monitoring" },
     ],
@@ -330,7 +331,7 @@ const RESOURCES = [
     scales: ["plot", "site"],
     budget: ["low", "medium"],
     expertise: ["community", "technician"],
-    ecosystems: ["tropical_moist", "tropical_dry", "coastal"],
+    ecosystems: ["tropical_moist","tropical_dry","coastal","savanna"],
     links: [
       { label: "TreeMapper", url: "https://www.plant-for-the-planet.org/treemapper/" },
     ],
@@ -344,7 +345,7 @@ const RESOURCES = [
     scales: ["plot", "site", "landscape"],
     budget: ["low", "medium"],
     expertise: ["community", "technician"],
-    ecosystems: ["tropical_dry"],
+    ecosystems: ["tropical_dry","savanna"],
     links: [
       { label: "Regreening Africa app", url: "https://regreeningafrica.org/in-the-news/the-regreening-africa-app/" },
     ],
@@ -358,7 +359,7 @@ const RESOURCES = [
     scales: ["site", "landscape", "regional"],
     budget: ["medium", "high"],
     expertise: ["technician", "research"],
-    ecosystems: ["tropical_moist", "tropical_dry", "coastal"],
+    ecosystems: ["tropical_moist","tropical_dry","coastal","savanna"],
     links: [
       { label: "instrumentl.com", url: "https://www.instrumentl.com" },
     ],
@@ -372,7 +373,7 @@ const RESOURCES = [
     scales: ["site", "landscape", "regional"],
     budget: ["low", "medium"],
     expertise: ["technician", "research"],
-    ecosystems: ["tropical_moist", "tropical_dry", "coastal"],
+    ecosystems: ["tropical_moist","tropical_dry","coastal","savanna"],
     links: [
       { label: "liveimpact.org", url: "https://www.liveimpact.org" },
     ],
@@ -386,7 +387,7 @@ const RESOURCES = [
     scales: ["site", "landscape", "regional"],
     budget: ["medium", "high"],
     expertise: ["technician", "research"],
-    ecosystems: ["tropical_moist", "tropical_dry", "coastal"],
+    ecosystems: ["tropical_moist","tropical_dry","coastal","savanna"],
     links: [
       { label: "GrantHub Pro", url: "https://www.foundant.com/granthub" },
     ],
@@ -400,7 +401,7 @@ const RESOURCES = [
     scales: ["landscape", "regional"],
     budget: ["high"],
     expertise: ["technician", "research"],
-    ecosystems: ["tropical_moist", "tropical_dry", "coastal"],
+    ecosystems: ["tropical_moist","tropical_dry","coastal","savanna"],
     links: [
       { label: "Nonprofit Cloud for Grantmaking", url: "https://www.salesforce.com/nonprofit/grantmaking-software" },
     ],
@@ -944,7 +945,7 @@ export default function MonitoringWizard() {
               fontSize: 16,
             }}
           >
-            🌲
+            🌴
           </div>
           <span
             style={{
@@ -1007,7 +1008,7 @@ export default function MonitoringWizard() {
             transition: "all 0.5s ease",
           }}
         >
-          <div style={{ fontSize: 48, marginBottom: 24 }}>🌲</div>
+          <div style={{ fontSize: 48, marginBottom: 24 }}>🌴</div>
           <h1
             style={{
               fontFamily: "'Fraunces', serif",
