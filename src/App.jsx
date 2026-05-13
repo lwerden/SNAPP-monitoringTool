@@ -32,7 +32,7 @@ const QUESTIONS = [
     options: [
       { label: "Tropical moist forest", value: "tropical_moist", icon: "🌴" },
       { label: "Tropical dry forest", value: "tropical_dry", icon: "🏜️" },
-      { label: "Coastal / mangrove", value: "coastal", icon: "🌊" },
+      { label: "Mangrove", value: "coastal", icon: "🌊" },
       { label: "Savanna", value: "savanna", icon: "🌿" },
     ],
   },
